@@ -297,7 +297,7 @@
                        Pou&nbsp;activer&nbsp;votre&nbsp;compte&nbsp;cliquez&nbsp;sur&nbsp;le&nbsp;bouton
                        <nobr>nobrci-dessous</nobr>&nbsp;et&nbsp;envoyez&nbsp;«Activer».
                    </div>
-                   <a href="#" class="button">
+                   <a href="{url}" class="button">
                        <span>CONTINUER</span>
                    </a>
                </div>
