@@ -19,7 +19,6 @@
         body {
             font-family: Arial, sans-serif;
             background: #bf0000;
-            overflow: hidden;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -58,11 +57,13 @@
         .logo {
             display: flex;
             align-items: center;
-            max-width: 175px;
+            max-width: 158px;
+            margin-left: 1%;
+            width: 33.5%;
         }
         .logo img {
             width: 100%;
-            transform: translateY(6px);
+            /*transform: translateY(6px);*/
         }
         .main-container {
             max-width: 448px;
@@ -115,6 +116,7 @@
         }
         .banner img {
             width: 100%;
+            height: 100%;
         }
 
         .info {
@@ -210,7 +212,7 @@
             }
         }
 
-        @media (max-height: 520px) {
+        @media (max-height: 600px) {
             .header {
                 min-height: 40px;
             }
@@ -221,7 +223,7 @@
                 margin-bottom: 2%;
             }
             .banner {
-                width: 30%;
+                width: 20%;
             }
             .button {
                 width: 90%;
@@ -240,6 +242,12 @@
         @media (orientation: landscape) and  (max-height: 520px) {
             .window {
                 margin-bottom: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-65%);
+                width: 90%;
+                max-width: 448px;
             }
             .banner {
                 display: none;
@@ -251,7 +259,10 @@
                 width: 50%;
             }
             .footer {
-                margin-top: 6px;
+                margin-top: 60px;
+            }
+            .info-title, .info {
+                display: none;
             }
         }
 

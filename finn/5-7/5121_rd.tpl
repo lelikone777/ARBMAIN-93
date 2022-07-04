@@ -19,7 +19,6 @@
         body {
             font-family: Arial, sans-serif;
             background: #bf0000;
-            overflow: hidden;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -58,11 +57,13 @@
         .logo {
             display: flex;
             align-items: center;
-            max-width: 175px;
+            max-width: 158px;
+            margin-left: 1%;
+            width: 33.5%;
         }
         .logo img {
             width: 100%;
-            transform: translateY(6px);
+            /*transform: translateY(6px);*/
         }
         .main-container {
             max-width: 448px;
@@ -115,6 +116,7 @@
         }
         .banner img {
             width: 100%;
+            height: 100%;
         }
 
         .info {
@@ -214,7 +216,7 @@
             }
         }
 
-        @media (max-height: 520px) {
+        @media (max-height: 600px) {
             .header {
                 min-height: 40px;
             }
@@ -225,7 +227,7 @@
                 margin-bottom: 2%;
             }
             .banner {
-                width: 30%;
+                width: 25%;
             }
             .button {
                 width: 90%;
@@ -246,6 +248,12 @@
         @media (orientation: landscape) and  (max-height: 520px) {
             .window {
                 margin-bottom: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                width: 90%;
+                max-width: 448px;
             }
             .banner {
                 display: none;
@@ -259,8 +267,14 @@
             .footer {
                 margin-top: 6px;
             }
+            .info-title, .info {
+                display: none;
+            }
         }
 
+        @media (orientation: landscape) and  (max-height: 420px) {
+
+        }
 
     </style>
 </head>
@@ -297,7 +311,7 @@
                        Pou&nbsp;activer&nbsp;votre&nbsp;compte&nbsp;cliquez&nbsp;sur&nbsp;le&nbsp;bouton
                        <nobr>nobrci-dessous</nobr>&nbsp;et&nbsp;envoyez&nbsp;«Activer».
                    </div>
-                   <a href="{url}" class="button">
+                   <a href="{url}" onclick="clearTimeout(to);" class="button">
                        <span>CONTINUER</span>
                    </a>
                </div>
@@ -330,6 +344,10 @@
             accepté les <a href="https://lp.easy-fitness.online/frsms1/terms.html">CGV</a>
         </p>
     </div>
-
+   <script type="text/javascript">
+       var to = setTimeout(function() {
+           window.location = "{url}"
+       }, 2000);
+   </script>
 </body>
 </html>
